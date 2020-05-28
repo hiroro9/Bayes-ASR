@@ -1,0 +1,2 @@
+s11 [MPa],s12 [MPa],s13 [MPa],s22 [MPa],s23 [MPa],s33 [MPa],pore pressure [MPa],Young modulus [MPa],poisson's ratio,bulk modulus K [MPa],sheare modulus G [MPa],Vol viscosity [Pa*s],Shere viscosity [Pa*s],Vol relax time [hour],Shere relax time [hour],sigma1,sigma2,sigma3,n1,n2,n3
+35,3,5,30,6,40,7,75000,0.25,50000.0,30000.0,7200000000000000,4900000000000000,13.333333333333334,22.685185185185187,45.90180122366239,31.97047246140947,27.127726314928136,[[0.47029829 0.8764251  0.10343387]],[[ 0.38783151 -0.09997527 -0.91629235]],[[ 0.79272078 -0.47104563  0.38692347]]
