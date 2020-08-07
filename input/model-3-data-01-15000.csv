@@ -1,2 +1,0 @@
-data file,model,seed,chains,iteration,warmup,thin,xx,yy,zz,xy,yx,yz,zy,zx,xz,Young[GPa],Poisson,Sv[MPa]
-data-01.csv,model-3,1234,3,15000,5000,1,CH01,CH02,CH03,CH04,CH05,CH06,CH07,CH08,CH09,75,0.25,40

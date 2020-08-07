@@ -1,0 +1,2 @@
+data file,model,seed,chains,iteration,warmup,thin,xx,yy,zz,xy,yx,yz,zy,zx,xz,delay_time[h],Young[GPa],Poisson,Sv[MPa],pp[MPa]
+data-2days.csv,case-Sv-pp-E-nu-1,1234,3,1500,500,1,CH01,CH02,CH03,CH04,CH05,CH06,CH07,CH08,CH09,0,75,0.25,40,7

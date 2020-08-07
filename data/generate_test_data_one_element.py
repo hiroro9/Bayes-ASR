@@ -5,12 +5,16 @@ from matplotlib import pyplot as plt
 from numpy import linalg as LA
 
 pi = np.pi
-columns = ["time[h]"," CH01", "CH02", "CH03", "CH04", "CH05", "CH06", "CH07", "CH08", "CH09"]
+columns = ["time[h]","CH01", "CH02", "CH03", "CH04", "CH05", "CH06", "CH07", "CH08", "CH09"]
 en = pd.DataFrame(index=[],columns=columns)
 
 """=====  input parameters  ========"""
 # file names #
-file = "data-01"
+file = "data-2days"
+
+# measurement time [hour] & delay time [hour]
+MT = 48
+dt = 0
 
 # stress tensor [MPa]#
 s11 = 35
@@ -94,10 +98,10 @@ figure_name = file + ".png"
 txt_name = file + "_input_data.csv"
 
 """=====  model equations  ========"""
-for min in range(0,2880,10):
+for min in range(0,MT*60,10):
   t = min/60
-  Jav = (1-np.exp(-t/tv))/(3*K)
-  Jas = (1-np.exp(-t/ts))/(2*G)
+  Jav = (1-np.exp(-(t+dt)/tv))/(3*K)
+  Jas = (1-np.exp(-(t+dt)/ts))/(2*G)
   
   es = (n.T@s@n - (1.0/3.0)*np.trace(s)*np.identity(9))*Jas
   ev = ((1.0/3.0)*np.trace(s) - p0)*Jav*np.identity(9)
@@ -122,6 +126,8 @@ fig.savefig(figure_name)
 """================================"""
 
 data_table = pd.DataFrame({
+              "Measuring time [h]":[MT],
+              "delay time [h]":[dt],
               "s11 [MPa]":[s11],
               "s12 [MPa]":[s12],
               "s13 [MPa]":[s13],
